@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+    font-family: "Museo300Regular";
+    src: url(fonts/Museo300-Regular-webfont.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "MuseoSans500";
+    src: url(fonts/MuseoSans_500-webfont.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Lintel";
+    src: url(fonts/Lintel_Reg-webfont.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(fonts/OpenSans-Light.ttf) format("truetype");
+}
+
+html, body, h1, h2, h3, p, li {
+	margin: 0;
+    font-family: "OpenSansLight";
+	color: #FFF;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FF9;
+}
+
+h1 {
+	font-size: 24px;
+	color: #FF9;
+}
+
+p {
+	margin-top: 10px;
+}
+
+#foto-fundo {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	background-image: url(img/sao_pedro_1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	z-index: -4;
+}
+
+#foto-fundo img {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+}
+
+#principal {
+	position: absolute;
+	margin: auto 12px;
+	top: 0; left: 0; bottom: 0; right: 0;
+	width: auto;
+	min-width: 1000px;
+	height: 600px;
+}
+
+#nav {
+	float: left;
+	left: 0;
+	padding: 19px 0;
+	width: 238px;
+	height: 562px;
+	background-color: rgba(0,0,0,.7);
+}
+
+#logo {
+	padding: 3px 19px;
+	width: 200px;
+	height: 94px;
+	background-color: rgba(255,255,255,.7);
+	text-align: center;
+}
+
+#lingua {
+	padding: 10px 19px;
+	width: 200px;
+	height: 22px;
+}
+
+#lingua ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-transition: opacity 0.2s;
+}
+
+#lingua ul li {
+	display: inline-block;
+	margin: auto;
+	width: 70px;
+	height: 100%;
+	color: #DDD;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+#lingua ul li:hover {
+	color: #FF9;
+}
+
+#lingua ul li.inactive {
+	color: #DDD;
+}
+
+#lingua ul li.inactive:hover {
+	color: #6CF;
+}
+
+#lingua ul li.active {
+	color: #FF9;
+}
+
+#lingua ul li.active:hover {
+	color: #FF9;
+	cursor: auto;
+}
+
+#menu {
+	top: 0;
+	padding: 35px 0 0 0;
+	width: 238px;
+	height: 385px;
+}
+
+#menu ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	padding: 0;
+	margin: 0;
+	left: 0; bottom: 0;
+	height: 100%;
+	width: 100%;
+	text-align: left;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-transition: opacity 0.2s;
+}
+
+#menu ul li {
+	display: block;
+	height: 20px;
+	padding: 17.5px 19px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#menu ul li.inactive {
+	color: #FFF;
+}
+
+#menu ul li.inactive:hover {
+	background-color: rgba(0,0,0,.5);
+	color: #6CF;
+}
+
+#menu ul li.active {
+	background-color: rgba(0,0,0,.5);
+	color: #FF9;
+}
+
+#menu ul li.active:hover {
+	background-color: rgba(0,0,0,.5);
+	color: #FF9;
+}
+
+.conteudo {
+	position: absolute;
+	display: none;
+	left: 250px;
+	right: 250px;
+	padding: 19px 25px;
+	width: auto;
+	height: 562px;
+	background-color: rgba(0,0,0,.7);
+	z-index: -1;
+}
+
+#contatos {
+	float: right;
+	right: 0;
+	padding: 19px;
+	width: 200px;
+	height: 562px;
+	background-color: rgba(0,0,0,.7);
+}
+
+#form-contato {
+	padding: 0;
+	width: 200px;
+	height: 331px;
+	background-color: rgba(255,255,255,.2);
+	overflow: auto;
+}
+
+#info-contato {
+	padding: 20px 0;
+	width: 200px;
+	height: 169px;
+	text-align: left;
+	font-size: 12px;
+}
+
+#copyright {
+	padding-top: 10px;
+	width: 200px;
+	height: 22px;
+}

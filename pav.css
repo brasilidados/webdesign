@@ -1,6 +1,27 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*@font-face {
+    font-family: "Miama";
+    src: url(fonts/Miama.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "Allura";
+    src: url(fonts/Allura-Regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "WaterStreet";
+    src: url(fonts/waterst.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "LeagueScript";
+    src: url(fonts/LeagueScript.otf) format("truetype");
+}
+
+
 @font-face {
     font-family: "Museo300Regular";
     src: url(fonts/Museo300-Regular-webfont.ttf) format("truetype");
@@ -21,9 +42,53 @@
     src: url(fonts/OpenSans-Light.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "TradeWinds";
+    src: url(fonts/TradeWinds-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "CherrySwash";
+    src: url(fonts/CherrySwash-Regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "KingthingsLight";
+    src: url(fonts/Kingthings_Calligraphica_Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Windsong";
+    src: url(fonts/Windsong.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "GreatVibes";
+    src: url(fonts/GreatVibes-Regular.otf) format("truetype");
+}*/
+
+@font-face {
+    font-family: "QuicksandLight";
+    src: url(fonts/Quicksand-Light.otf) format("opentype");
+}
+
+/*@font-face {
+    font-family: "AlmendraDisplay";
+    src: url(fonts/AlmendraDisplay-Regular.otf) format("truetype");
+}*/
+
+@font-face {
+    font-family: "Quilline";
+    src: url(fonts/QUIL_S_T.ttf) format("truetype");
+}
+
+
+
 html, body, h1, h2, h3, p, li {
 	margin: 0;
-    font-family: "OpenSansLight";
+    font-family: "Quilline";
+	font-style: normal;
+	font-weight: normal;
 	color: #FFF;
 }
 
@@ -32,63 +97,176 @@ html {
 }
 
 body {
+	top: 0;
 	width: 100%;
 	height: 100%;
+	text-align: center;
 }
 
 a {
-	color: #FFF;
+	color: #FF9;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #FF9;
+	color: #6CF;
 }
 
 h1 {
+	font-size: 36px;
+	color: #6CF;
+}
+
+h3 {
 	font-size: 24px;
-	color: #FF9;
+	color: #6CF;
+	padding-top: 10px;
+}
+
+h3 span {
+	color: #DDD;
+	font-family: "QuicksandLight";
+	font-size: 10px;
+}
+
+table {
+    font-family: "QuicksandLight";
+	font-size: 14px;
+	vertical-align: top;
+	width: 100%;
+	padding-top: 5px;
 }
 
 p {
+    font-family: "QuicksandLight";
 	margin-top: 10px;
+}
+
+#fecha-galeria {
+	position: fixed;
+	top: -30px;
+	width: 100%;
+	padding-top: 5px;
+	height: 25px;
+	text-align: center;
+    font-family: "QuicksandLight";
+	font-size: 14px;
+	z-index: 100;
+	-webkit-transiton: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	-transition: all .5s;
+	transition: all .5s;
+	background-color: rgba(0,0,0,.15);
+	cursor: pointer;
+}
+
+#fecha-galeria.in {
+	top: 0px;
+	background-color: rgba(0,0,0,.3);
+}
+
+#fecha-galeria.in:hover {
+	color: #FF9;
+	
 }
 
 #foto-fundo {
 	position: relative;
 	width: 100%;
 	min-height: 100%;
-	background-image: url(img/sao_pedro_1.jpg);
+	/*background-image: url(img/sao_pedro_1.jpg);
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 	overflow: hidden;
-	z-index: -4;
-}
-
-#foto-fundo img {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100%;
+	z-index: 1;
 }
 
 #principal {
 	position: absolute;
-	margin: auto 12px;
-	top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+	top: 0; left: 12px; bottom: 0; right: 12px;
 	width: auto;
-	min-width: 1000px;
-	height: 600px;
+	min-width: 765px;
+	max-width: 1430px;
+	height: 500px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.conteudo {
+	position: absolute;
+	display: block;
+	top: -500px;
+	left: 250px;
+	right: 250px;
+	width: auto;
+	padding: 19px 25px;
+	height: 462px;
+	background-color: rgba(0,0,0,.7);
+	overflow: auto;
+	z-index: 3;
+	-webkit-transiton: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-transition: all 0.5s;
+	transition: all 0.5s;
+	text-align: left;
+}
+
+.conteudo.active {
+	top: 0;
+}
+
+.conteudo p {
+	font-size: 14px;
+}
+
+#map_canvas {
+	display: block;
+	width: 100%;
+	height: 230px;
+}
+
+#previsao-container {
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	width: 100%;
+	top: 50px;
+	bottom: 0;
+	height: auto;
+}
+
+.previsao-unidade {
+	display: inline-block;
+	margin: auto;
+	padding: 0;
+	width: 215px;
+	height: 225px;
 }
 
 #nav {
+	position: absolute;
 	float: left;
 	left: 0;
 	padding: 19px 0;
 	width: 238px;
-	height: 562px;
+	height: 462px;
 	background-color: rgba(0,0,0,.7);
+	z-index: 4;
+	-webkit-transiton: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	-transition: all .5s;
+	transition: all .5s;
+}
+
+#nav.out {
+	left: -300px;
 }
 
 #logo {
@@ -123,6 +301,7 @@ p {
 	-ms-transition: opacity 0.2s;
 	-o-transition: opacity 0.2s;
 	-transition: opacity 0.2s;
+	transition: opacity 0.2s;
 }
 
 #lingua ul li {
@@ -132,12 +311,9 @@ p {
 	height: 100%;
 	color: #DDD;
 	text-align: center;
+	font-family: "QuicksandLight";
 	font-size: 12px;
 	cursor: pointer;
-}
-
-#lingua ul li:hover {
-	color: #FF9;
 }
 
 #lingua ul li.inactive {
@@ -145,23 +321,22 @@ p {
 }
 
 #lingua ul li.inactive:hover {
-	color: #6CF;
+	color: #FF9;
 }
 
 #lingua ul li.active {
-	color: #FF9;
+	color: #6CF;
 }
 
 #lingua ul li.active:hover {
-	color: #FF9;
 	cursor: auto;
 }
 
 #menu {
 	top: 0;
-	padding: 35px 0 0 0;
+	padding: 15px 0 0 0;
 	width: 238px;
-	height: 385px;
+	height: 305px;
 }
 
 #menu ul {
@@ -182,13 +357,14 @@ p {
 	-ms-transition: opacity 0.2s;
 	-o-transition: opacity 0.2s;
 	-transition: opacity 0.2s;
+	transition: opacity 0.2s;
 }
 
 #menu ul li {
 	display: block;
-	height: 20px;
-	padding: 17.5px 19px;
-	font-size: 14px;
+	height: 25px;
+	padding: 7px 19px 7px 19px;
+	font-size: 24px;
 	cursor: pointer;
 }
 
@@ -198,54 +374,66 @@ p {
 
 #menu ul li.inactive:hover {
 	background-color: rgba(0,0,0,.5);
-	color: #6CF;
+	color: #FF9;
 }
 
 #menu ul li.active {
 	background-color: rgba(0,0,0,.5);
-	color: #FF9;
-}
-
-#menu ul li.active:hover {
-	background-color: rgba(0,0,0,.5);
-	color: #FF9;
-}
-
-.conteudo {
-	position: absolute;
-	display: none;
-	left: 250px;
-	right: 250px;
-	padding: 19px 25px;
-	width: auto;
-	height: 562px;
-	background-color: rgba(0,0,0,.7);
-	z-index: -1;
+	color: #6CF;
 }
 
 #contatos {
+	position: absolute;
 	float: right;
 	right: 0;
 	padding: 19px;
 	width: 200px;
-	height: 562px;
+	height: 462px;
 	background-color: rgba(0,0,0,.7);
+	z-index: 4;
+	-webkit-transiton: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	-transition: all .5s;
+	transition: all .5s;
+	text-align: left;
+}
+
+#contatos.out {
+	right: -300px;
 }
 
 #form-contato {
 	padding: 0;
 	width: 200px;
-	height: 331px;
+	height: 301px;
 	background-color: rgba(255,255,255,.2);
 	overflow: auto;
 }
 
 #info-contato {
-	padding: 20px 0;
+	padding: 10px 0 0 0;
 	width: 200px;
-	height: 169px;
+	height: 110px;
 	text-align: left;
 	font-size: 12px;
+}
+
+#facebook {
+	position: absolute;
+	bottom: 19px;
+	right: 19px;
+	width: 40px;
+	height: 40px;
+	opacity: .6;
+	background-image: url(../img/facebook_small.png);
+	background-size: 40px 40px;
+	background-repeat: no-repeat;
+}
+
+#facebook:hover {
+	opacity: 1;
 }
 
 #copyright {

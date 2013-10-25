@@ -2,13 +2,13 @@
 @import 'http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek-ext,cyrillic-ext,greek,vietnamese,cyrillic,latin-ext';
 
 @font-face {
-    font-family: "Museo300Regular";
-    src: url(../fonts/Museo300-Regular-webfont.ttf) format("truetype");
+    font-family: "QuicksandLight";
+    src: url(../fonts/Quicksand-Light.otf) format("opentype");
 }
 
 @font-face {
-    font-family: "OpenSansLight";
-    src: url(../fonts/OpenSans-Light.ttf) format("truetype");
+    font-family: "Quilline";
+    src: url(../fonts/QUIL_S_T.ttf) format("truetype");
 }
 
 .formoid-default{
@@ -88,13 +88,14 @@
 }
 .formoid-default h2 {
 	margin: 0.2em 0;
-	font-size: 16px;
-	font-family: "OpenSansLight";
+	font-size: 26px;
+	font-family: "Quilline";
 	font-weight: normal;
 }
 
 .formoid-default label {
 	font-size: 12px;
+	font-family: "QuicksandLight";
 	display: block;
 	margin-bottom: 0;
 	clear: both;
@@ -379,8 +380,8 @@ Not advised to edit stuff below this line
 }
 
 .formoid-default input[type=submit] {
-	font-size: 1em;
-	font-family: inherit;
+	font-size: 20px;
+	font-family: "Quilline";
 	background-color: rgba(0,0,0,.2);
 	color: #ffffff;
 	/*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -510,9 +511,9 @@ Not advised to edit stuff below this line
 .formoid-default input[type=url],
 .formoid-default textarea {
 	background-color: transparent;
-	width: 163px;
+	width: 90%;
 	/*margin-left:-1px;*/
-	font-family:inherit;
+    font-family: "QuicksandLight";
 	font-size: 12px;
 	font-weight: normal;
 	padding: 4px;
